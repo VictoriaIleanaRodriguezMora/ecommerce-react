@@ -1,13 +1,19 @@
-const Counter = (props) => {
-console.log(props);
+import Button from '../button/button'
 
-return(
-    <div className="divButton">
-        <button className="btn">-</button>
-        <p>{props.text}</p>
-        <button className="btn">+</button>
-    </div>
-)
+const Counter = (props) => {
+
+    const incrementar = (num) => {
+        console.log("SUMA");
+    }
+
+    return (
+        <div className="divButton">
+            {/* <button className="btn">-</button> */}
+            <Button btnClass="btn" label="-"></Button>
+            <p>{props.num}</p>
+            <Button operacion={incrementar} btnClass="btn" label="+"></Button>
+        </div>
+    )
 
 }
 export default Counter

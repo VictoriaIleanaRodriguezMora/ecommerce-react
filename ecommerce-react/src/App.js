@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/counter/counter'
 
 function App() {
   return (
@@ -8,15 +9,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hola mundo</h1>
         <p>Instalacion de React</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
+      <Counter text={"contador"} /> 
     </div>
   );
 }

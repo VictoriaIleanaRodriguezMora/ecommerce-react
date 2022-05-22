@@ -1,7 +1,16 @@
 .App {
   text-align: center;
+  background-color: lightblue;
 }
 
+.btn{
+  color: red;
+  padding: 2%;
+}
+
+.divButton{
+background-color: green;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -10,7 +10,7 @@ function App() {
         <h1>Hola mundo</h1>
         <p>Instalacion de React</p>
 
-      <Counter num={0} /> 
+      <Counter numInicial={0} /> 
       </header>
     </div>
   );

@@ -3,14 +3,16 @@
   background-color: lightblue;
 }
 
-.btn{
+.btn {
   color: red;
   padding: 2%;
 }
 
-.divButton{
+.divButton {
   width: 100%;
-background-color: green;
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
 }
 .App-logo {
   height: 40vmin;

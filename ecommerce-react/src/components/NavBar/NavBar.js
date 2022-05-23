@@ -1,9 +1,10 @@
-import itemList from '../itemList/itemList';
+import ItemList from "../ItemList/ItemList"
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
-        console.log(props.hola)
-
+        <ul>
+            <ItemList liContent={"hola"}/>
+        </ul>
     )
 
 }

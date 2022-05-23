@@ -1,7 +1,5 @@
-const itemList = (props) => {
+const ItemList = (props) => {
     return (
-          props.hola={"hola"}
-        )
-    )
+    <li>{props.liContent} </li>)
 }
-export default itemList
+export default ItemList

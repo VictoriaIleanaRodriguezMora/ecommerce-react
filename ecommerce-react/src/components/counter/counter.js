@@ -4,7 +4,6 @@ import Button from '../button/button'
 const Counter = (props) => {
     let [count, setCount] = useState(props.numInicial)
 
-
     const incrementar = () => {
         setCount(count + 1)
         console.log(count);

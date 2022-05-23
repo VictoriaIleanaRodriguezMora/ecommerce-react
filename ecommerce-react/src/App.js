@@ -1,13 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Counter from './components/counter/counter'
+import NavBar  from './components/NavBar/NavBar'; 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Contador </h1>
-      <Counter numInicial={8} /> 
+        <NavBar />
       </header>
     </div>
   );

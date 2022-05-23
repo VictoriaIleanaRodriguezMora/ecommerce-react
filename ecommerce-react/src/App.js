@@ -6,10 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hola mundo</h1>
-        <p>Instalacion de React</p>
-
+        <h1>Contador </h1>
       <Counter numInicial={8} /> 
       </header>
     </div>

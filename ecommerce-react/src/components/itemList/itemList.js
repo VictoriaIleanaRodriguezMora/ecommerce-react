@@ -1,5 +1,5 @@
-const ItemList = (props) => {
+const ItemList = ({liContent, liClass}) => {
     return (
-    <li>{props.liContent} </li>)
+    <li className={liClass}>{liContent} </li>)
 }
 export default ItemList

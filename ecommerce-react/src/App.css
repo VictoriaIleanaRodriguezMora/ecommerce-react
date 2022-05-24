@@ -2,12 +2,26 @@ body {
   text-align: center;
   background-color: lightblue;
 }
-
+ul{
+  list-style: none;
+}
+.nav__li{
+  color: white;
+  padding: 1%;
+  font-size: 1.5em;
+}
 .btn {
   color: red;
   padding: 2%;
 }
-
+.header__nav{
+  width: 100%;
+}
+.header__nav ul{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;  
+}
 .divButton {
   width: 100%;
   background-color: green;

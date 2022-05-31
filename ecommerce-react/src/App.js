@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-      <Counter numInicial={8}/>
+      <Counter numInicial={10}/>
     </div>
   );
 }

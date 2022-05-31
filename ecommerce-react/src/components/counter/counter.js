@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Button from '../button/button'
+import Button from '../Button/Button'
 
-const Counter = (props) => {
-    let [count, setCount] = useState(props.numInicial)
+const Counter = ({numInicial}) => {
+    let [count, setCount] = useState(numInicial)
 
     const incrementar = () => {
         setCount(count + 1)
@@ -15,11 +15,10 @@ const Counter = (props) => {
     }
     return (
         <div className="divButton">
-            {/* <button  onClick={decrementar} className="btn">-</button> */}
-            
-            <Button operacion={decrementar} btnClass="btn" label="-"></Button>
+          
+            <Button operacion={decrementar} btnClass="btn" label="-"><h1>-</h1></Button>
             <p>{count}</p>
-            <Button  operacion={incrementar} btnClass="btn" label="+"></Button>
+            <Button  operacion={incrementar} btnClass="btn" label="+"><h1>+</h1></Button>
         </div>
     )
 

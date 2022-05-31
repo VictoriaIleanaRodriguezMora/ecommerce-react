@@ -1,7 +1,8 @@
-const Button = ({operacion, btnClass, children}) => {
-    console.log(children);
+const Button = ({accion, btnClass, children}) => {
+    // estas props, se definen en el padre, pero es el quien define las props en realidad
+    // console.log(children);
     return (
-        <button onClick={operacion} className={btnClass} >{children}</button>
+        <button onClick={accion} className={btnClass} >{children}</button>
     )
 }
 export default Button

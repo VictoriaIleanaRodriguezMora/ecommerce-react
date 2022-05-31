@@ -8,14 +8,18 @@ const Counter = ({ numInicial }) => {
     // useEffect
     useEffect(() => { 
         console.log("El componente fue montado")
+        // el ,[] es una dependencia, que le dice que SOLO se ejecute al montarse
     }, [])
 
     useEffect(() => { 
         console.log("despues del montaje y cuando se actualiza count")
+        // se ejecuta antes de montarse y este ,[count] le dice que escuche los cambios de count.
+        // osea que se va a ejecutar cuando count, cambie
     }, [count])
 
     useEffect(() => { 
         setResult(count * 2)
+        // este tambien escucha los cambios de count para ejecutarse. y usa el valor de count, y lo transforma.
     }, [count])
 
     const incrementar = () => {

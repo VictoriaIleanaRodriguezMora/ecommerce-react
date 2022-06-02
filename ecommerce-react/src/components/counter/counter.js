@@ -6,18 +6,21 @@ const Counter = ({ numInicial }) => {
     const [result, setResult] = useState(0)
 
     // useEffect
-    useEffect(() => { 
-        console.log("El componente fue montado")
+    useEffect(() => {
+        console.log("El componente fue montado+++++++++++++++++++++++++")
+        return () => {
+            console.log("se desmontó el componente-------------------------");
+        }
         // el ,[] es una dependencia, que le dice que SOLO se ejecute al montarse
     }, [])
 
-    useEffect(() => { 
-        console.log("despues del montaje y cuando se actualiza count")
+    useEffect(() => {
+        console.log("despues del montaje y cuando se actualiza count***************************")
         // se ejecuta antes de montarse y este ,[count] le dice que escuche los cambios de count.
         // osea que se va a ejecutar cuando count, cambie
     }, [count])
 
-    useEffect(() => { 
+    useEffect(() => {
         setResult(count * 2)
         // este tambien escucha los cambios de count para ejecutarse. y usa el valor de count, y lo transforma.
     }, [count])
@@ -32,10 +35,11 @@ const Counter = ({ numInicial }) => {
         setCount(numInicial)
     }
 
-    console.log("antes del montaje y en cada actualizacion");
+    console.log("antes del montaje y en cada actualizacion////////////////////////////");
     return (
         <div className="divButton">
             {/* El prototipo de este, es OBJETO */}
+            
             <Button accion={decrementar} btnClass="btn" label="-"><h1>-</h1></Button>
             <p>{count}</p>
             <p>{result}</p>

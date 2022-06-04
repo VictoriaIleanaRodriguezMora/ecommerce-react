@@ -1,5 +1,7 @@
-const ItemList = ({liContent, liClass}) => {
+const ItemList = ({ prods }) => {
     return (
-    <li className={liClass}>{liContent} </li>)
-}
+        <ul>
+            {prods.map(prods => <li key={prods.id}> {prods.name}</li>)}
+        </ul>
+    )}
 export default ItemList

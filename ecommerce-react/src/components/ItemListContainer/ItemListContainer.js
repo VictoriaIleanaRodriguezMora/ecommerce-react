@@ -11,19 +11,19 @@ const ItemListContainer = ({ }) => {
         })
     }, [])
 
-    const prodsComponentes = prods.map(prod => {
-            return (
-                <li key={prod.id}>
-                    {prod.name}
-                </li>
-            )
-        })
+    // const prodsComponentes = prods.map(prod => {
+    //         return (
+    //             <li key={prod.id}>
+    //                 {prod.name}
+    //             </li>
+    //         )
+    //     })
     
 
     return (
         <div>
             <ul>
-                {prodsComponentes}
+                {prods.map(prods => <li key={prods.id}> {prods.name}</li>)}
             </ul>
         </div>
     )

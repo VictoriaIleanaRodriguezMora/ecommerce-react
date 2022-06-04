@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       {/* <header className="App-header">
-        <NavBar />
+      <NavBar />
       </header>
       <Button accion={() => setShow(!show)} btnClass="btn" label="-">show/hide</Button>
       {show && <Counter numInicial={10} />}     */}
-<ItemListContainer />
+      <ItemListContainer />
     </div>
   );
 }

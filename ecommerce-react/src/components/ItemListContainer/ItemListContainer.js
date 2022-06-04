@@ -1,6 +1,8 @@
 import { getProductos } from "../asynckmock"
 import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
+import "./ItemListContainer.css"
+
 const ItemListContainer = ({ }) => {
 
     const [prods, setProds] = useState([])
@@ -22,7 +24,6 @@ const ItemListContainer = ({ }) => {
 
     return (
         <div>
-            <p>hola</p>
             <ItemList prods={prods} />
         </div>
     )

@@ -10,10 +10,21 @@ const ItemListContainer = ({ }) => {
             setProds(response);
         })
     }, [])
-    console.log(prods)
+
+    const prodsComponentes = prods.map(prod => {
+            return (
+                <li key={prod.id}>
+                    {prod.name}
+                </li>
+            )
+        })
+    
+
     return (
         <div>
-            <p>Hola</p>
+            <ul>
+                {prodsComponentes}
+            </ul>
         </div>
     )
 }

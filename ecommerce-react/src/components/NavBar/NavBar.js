@@ -1,16 +1,18 @@
-import ItemList from "../ItemList/ItemList"
+import TagLi from "../TagLi/TagLi"
+import "./NavBar.css"
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <nav className="header__nav">
-            <ul>
-                <ItemList liClass={"nav__li"} liContent={'Libros'} />
-                <ItemList liClass={"nav__li"} liContent={'Carrito'} />
-                <ItemList liClass={"nav__li"} liContent={'Quienes somos'} />
-                <ItemList liClass={"nav__li"} liContent={'Contacto'} />
+            <h3 className="nav__marca" >Marca</h3>
+            <ul className="nav__ul">
+                <TagLi liClass={"nav__li"} liContent={'Libros'} />
+                <TagLi liClass={"nav__li"} liContent={'Carrito'} />
+                <TagLi liClass={"nav__li"} liContent={'Quienes somos'} />
+                <TagLi liClass={"nav__li"} liContent={'Contacto'} />
             </ul>
+            <p className="nav__carrito">🛒</p>
         </nav>
     )
-
 }
 export default NavBar

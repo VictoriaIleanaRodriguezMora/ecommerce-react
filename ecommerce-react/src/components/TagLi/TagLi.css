@@ -1,0 +1,14 @@
+.nav__li {
+  color: white;
+  padding: 1%;
+  margin: 2%;
+  font-size: 1.5em;
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: 3px solid blueviolet;
+}

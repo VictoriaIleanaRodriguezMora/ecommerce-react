@@ -1,0 +1,31 @@
+.li_Item {
+  border: 2px solid black;
+  background-color: rgba(129, 129, 129, 0.575);
+  color: black;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.li__titulo{
+    font-size: 20px;
+    background-color: blueviolet;
+    padding: 2%;
+    width: 60%;
+    border-radius: 15px;
+    text-align: center;
+}
+.li__description{
+    background-color: white;
+    padding: 2%;
+    width: 40%;
+    border-radius: 15px;
+}
+.li_Item img {
+  width: 40%;
+  max-height: 40%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
+}

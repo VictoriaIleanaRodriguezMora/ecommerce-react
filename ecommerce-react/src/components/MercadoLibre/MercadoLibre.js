@@ -22,11 +22,13 @@ const MercadoLibre = () => {
 
     const buscar = (e) => {
         e.preventDefault()
-        fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${input}`).then(response => {
-            return response.json()
-        }).then(res => {
-            setProds(res.results)
-        })
+        fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${input}`)
+            .then(response => {
+                return response.json()
+            })
+            .then(res => {
+                setProds(res.results)
+            })
             .catch(error => {
                 console.log(error)
             })

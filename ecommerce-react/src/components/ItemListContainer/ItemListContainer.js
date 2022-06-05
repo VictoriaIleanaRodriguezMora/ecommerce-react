@@ -3,12 +3,13 @@ import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList.js"
 import "./ItemListContainer.css"
 
-const ItemListContainer = ({ }) => {
+const ItemListContainer = (props) => {
 
     const [prods, setProds] = useState([])
 
     useEffect(() => {
-        getProductos().then(response => {
+        getProductos()
+        .then(response => {
             setProds(response);
         })
     }, [])

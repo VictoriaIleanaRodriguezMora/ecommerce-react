@@ -1,0 +1,26 @@
+.div__IDC {
+  background-color: blueviolet;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.IDC__info {
+  width: 50%;
+  border-radius: 15px;
+  margin: 2%;
+  background-color: rgb(40, 0, 78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.div__IDC img {
+  width: 500px;
+  height: 500px;
+  margin: 2%;
+  border-radius: 15px;
+}

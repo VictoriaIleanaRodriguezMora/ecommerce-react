@@ -29,7 +29,10 @@ const ItemListContainer = () => {
 
     return (
         <div className="div__ILC">
-            <ItemList prods={prods} />
+            {prods.length > 0
+                ? <ItemList prods={prods} />
+                : <h1>No hay productos que coincidan con esta busqueda</h1>
+            }
         </div>
     )
 }

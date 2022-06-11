@@ -7,25 +7,40 @@ import { getProductosByCategory } from "../asynckmock"
 
 const ItemListContainer = () => {
 
-    
+    const [load, setLoad] = useState(true)
     const [prods, setProds] = useState([])
     const { categoryId } = useParams()
-    console.log(categoryId);
-
 
     useEffect(() => {
+        setLoad(true)
         if (!categoryId) {
-            getProductos().then(prods => {
+            getProductos()
+            .then(prods => {
                 setProds(prods);
             })
+            .catch(error => {
+                console.log(error);
+            })
+            .finally( () =>{
+                setLoad(false)
+            })
         } else {
-            getProductosByCategory(categoryId).then(prods => {
+            getProductosByCategory(categoryId)
+            .then(prods => {
                 setProds(prods)
             })
+            .catch(error => {
+                console.log(error);
+            })
+            .finally( () =>{
+                setLoad(false)
+            })
         }
-
     }, [categoryId])
 
+    if (load) {
+        return(<h2>cargando..</h2>)
+    }
 
     return (
         <div className="div__ILC">

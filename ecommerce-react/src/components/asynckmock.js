@@ -1,5 +1,3 @@
-// import { useParams } from "react-router"
-
 const productos = [
     {
         id: '1',
@@ -35,7 +33,6 @@ export const getProductosByCategory = (category) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(productos.filter(prod => prod.category === category))
-            console.log(category);
         }, 500)
     })
 }

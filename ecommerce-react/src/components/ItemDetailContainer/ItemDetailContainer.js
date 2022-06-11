@@ -5,10 +5,7 @@ import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
 
-    // 
-
     const [prods, setProds] = useState()
-
     const { productId } = useParams()
 
     useEffect(() => {

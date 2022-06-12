@@ -8,25 +8,27 @@
 }
 .nav__marca {
   font-size: 2em;
-  background-color: rgba(155, 155, 155, 0.842);
+  background-color: rgba(244, 244, 244, 0.84);
   box-shadow: 5px 5px 8px blueviolet;
-  padding: 1%;
+  padding: 11%;
   border-radius: 25px;
+  width: 100%;
 }
 .nav__ul {
   display: flex;
   background: red;
   width: 46%;
   border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.637);
+  background-color: rgba(64, 0, 141, 0.7);
 }
 .nav__carrito{
     font-size: 2em;
     background-color: rgb(255, 255, 255);
     padding: 1%;
-    border-radius: 50%;
+    border-radius: 50px;
     text-align: center;
     border: 3px solid blueviolet;
+    
 }
 .nav__li {
   color: white;

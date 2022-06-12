@@ -4,6 +4,7 @@ import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import { useParams } from "react-router"
 import { getProductosByCategory } from "../asynckmock"
+import Spinner from "../Spinner/Spinner"
 
 const ItemListContainer = () => {
 
@@ -39,7 +40,7 @@ const ItemListContainer = () => {
     }, [categoryId])
 
     if (load) {
-        return(<h2>cargando..</h2>)
+        return(<Spinner/>)
     }
 
     return (

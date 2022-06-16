@@ -3,26 +3,19 @@ body {
   /* background-color: lightblue; */
   margin-bottom: 5%;
 }
+
 ul{
   list-style: none;
 }
 a{
   text-decoration: none ;
 }
-.btn {
-  color: red;
-  padding: 2%;
-}
+
 .App{
   display: flex;
   flex-direction: column;
 }
-.divButton {
-  width: 100%;
-  background-color: green;
-  display: flex;
-  justify-content: space-around;
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

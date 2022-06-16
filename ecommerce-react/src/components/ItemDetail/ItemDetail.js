@@ -1,4 +1,5 @@
 import "./ItemDetail.css"
+import Counter from "../Counter/Counter"
 
 const ItemDetail = ({ name, img, price, description }) => {
     return (
@@ -7,6 +8,7 @@ const ItemDetail = ({ name, img, price, description }) => {
                 <h2 className="li__titulo">{name}</h2>
                 <p className="li__description"> {description}</p>
                 <p className="li__description">$ {price}</p>
+            <Counter name={name} />
             </div>
             <img src={img} alt={name} />
         </div>

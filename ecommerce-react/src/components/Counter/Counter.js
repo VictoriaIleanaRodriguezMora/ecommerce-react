@@ -13,7 +13,7 @@ const Counter = ({ name, cart, setCart, id, price }) => {
         setQuant(quant - 1)
     }
     const onAddCart = () => {
-        setCart([...cart, {name, id, price, quant}])
+        setCart([...cart, { name, id, price, quant }])
         console.log(`Se agregaron ${quant} ${name}`);
     }
 

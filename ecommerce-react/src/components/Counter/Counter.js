@@ -1,7 +1,9 @@
 import { useState } from "react"
+import CartWidget from "../CartWidget/CartWidget";
 import "./Counter.css"
 
-const Counter = ({name}) => {
+const Counter = ({ name, cart, setCart, id, price }) => {
+
     const [quant, setQuant] = useState(0)
 
     const increment = () => {
@@ -11,7 +13,8 @@ const Counter = ({name}) => {
         setQuant(quant - 1)
     }
     const onAddCart = () => {
-            console.log(`Se agregaron ${quant} ${name}` );
+        setCart([...cart, {name, id, price, quant}])
+        console.log(`Se agregaron ${quant} ${name}`);
     }
 
 

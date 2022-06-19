@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-
 import CartItem from "../CartItem/CartItem"
-// import { CartItemMsg } from "../CartItem/CartItem"
-const Cart = () => {
 
+const Cart = () => {
+    
     const CartItemMsg = () => {
         return (
             <div>

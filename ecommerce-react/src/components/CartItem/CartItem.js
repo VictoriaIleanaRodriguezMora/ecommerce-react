@@ -6,19 +6,7 @@ import { Link } from "react-router-dom";
 const CartItem = () => {
 
     const { cart, getTotalPrice } = useContext(CartContext)
-    console.log(cart);
-    // console.log(cart[0].name);
     const cartPosCero = cart[0]
-
-    // export const CartItemMsg = () => {
-    //     return (
-    //         <div>
-    //             <p>No hay productos agregados aun. </p>
-    //             <Link to="/" >Podes ir acá para empezar tu compra</Link>
-    //         </div>
-    //     )
-    // }
-
     return (
         <>
             <div className="CartItem__div">
@@ -29,7 +17,6 @@ const CartItem = () => {
                     <li>{getTotalPrice()}</li>
                 </ul>
             </div>
-            
         </>
     )
 

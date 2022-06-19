@@ -22,7 +22,6 @@ const Counter = ({ name, id, price }) => {
         setquantAdded(quant)
     }
 
-
     return (
         <div className="counter" >
             <div className="divButton">
@@ -31,7 +30,6 @@ const Counter = ({ name, id, price }) => {
                 <button onClick={increment} className="divButton__btn" >+</button>
             </div>
             <div className="agregar__carrito">
-                {/* <button >Agregar al carrito</button> */}
                 <button onClick={addItem} >Agregar al carrito</button>
 
             </div>

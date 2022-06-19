@@ -3,8 +3,10 @@ import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import { useParams } from "react-router"
-import { getProductosByCategory } from "../asynckmock"
+// import { getProductosByCategory } from "../asynckmock"
 import Spinner from "../Spinner/Spinner"
+import { getDocs, collection } from "firebase/firestore"
+import { bdd } from "../../services/firebase"
 
 const ItemListContainer = () => {
 
@@ -14,33 +16,38 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoad(true)
-        if (!categoryId) {
-            getProductos()
-            .then(prods => {
-                setProds(prods);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-            .finally( () =>{
-                setLoad(false)
-            })
-        } else {
-            getProductosByCategory(categoryId)
-            .then(prods => {
-                setProds(prods)
-            })
-            .catch(error => {
-                console.log(error);
-            })
-            .finally( () =>{
-                setLoad(false)
-            })
-        }
+
+        getDocs(collection(bdd, "products")).then(res => {
+            console.log(res);
+        })
+
+        // if (!categoryId) {
+        //     getProductos()
+        //     .then(prods => {
+        //         setProds(prods);
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+        //     .finally( () =>{
+        //         setLoad(false)
+        //     })
+        // } else {
+        //     getProductosByCategory(categoryId)
+        //     .then(prods => {
+        //         setProds(prods)
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     })
+        //     .finally( () =>{
+        //         setLoad(false)
+        //     })
+        // }
     }, [categoryId])
 
     if (load) {
-        return(<Spinner/>)
+        return (<Spinner />)
     }
 
     return (

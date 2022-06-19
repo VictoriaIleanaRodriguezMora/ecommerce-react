@@ -22,7 +22,6 @@ const ItemListContainer = () => {
 
             getDocs(collectionProdsRef)
                 .then(res => {
-                    console.log(res);
                     const prodsMaped = res.docs.map(doc => {
                         return { id: doc.id, ...doc.data() }
                     })

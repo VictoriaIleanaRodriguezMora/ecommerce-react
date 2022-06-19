@@ -1,8 +1,5 @@
-import { useState } from "react"
-import CartWidget from "../CartWidget/CartWidget";
 import "./Counter.css"
-import { useContext } from "react"
-// import { CartContext } from "../CartContext/CartContext"
+import { useContext, useState } from "react"
 import CartContext from "../CartContext/CartContext";
 
 const Counter = ({ name, id, price }) => {
@@ -15,7 +12,9 @@ const Counter = ({ name, id, price }) => {
         setQuant(quant + 1)
     }
     const decrement = () => {
-        setQuant(quant - 1)
+        if (quant > 1) {
+            setQuant(quant - 1)
+        }
     }
     const addItem = () => {
         console.log(`Se agregaron ${quant} ${name}`);

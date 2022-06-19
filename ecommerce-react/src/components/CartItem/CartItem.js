@@ -1,7 +1,16 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import CartContext from "../CartContext/CartContext";
 import "./CartItem.css"
 import { Link } from "react-router-dom";
+
+export const CartItemMsg = () => {
+    return (
+        <div>
+            <p>No hay productos agregados aun. </p>
+            <Link to="/" >Podes ir acá para empezar tu compra</Link>
+        </div>
+    )
+}
 
 const CartItem = () => {
 

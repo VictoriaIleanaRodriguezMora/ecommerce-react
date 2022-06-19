@@ -7,14 +7,14 @@ export const CartItemMsg = () => {
     return (
         <div>
             <p>No hay productos agregados aun. </p>
-            <Link to="/" >Podes ir acá para empezar tu compra</Link>
+            <Link to="/" >Podes ir acá para empezar tu compra.</Link>
         </div>
     )
 }
 
 const CartItem = () => {
 
-    const { cart, getTotalPrice } = useContext(CartContext)
+    const { cart, getTotalPrice, removeProdFromCart } = useContext(CartContext)
     const cartPosCero = cart[0]
     return (
         <>
@@ -25,6 +25,7 @@ const CartItem = () => {
                     <li>{cartPosCero.price}</li>
                     <li>{getTotalPrice()}</li>
                 </ul>
+                <button onClick={ () => removeProdFromCart(cartPosCero.id) } >Remover item</button>
             </div>
         </>
     )

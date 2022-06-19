@@ -1,6 +1,6 @@
 import CartItem from "../CartItem/CartItem"
 import CartContext from "../CartContext/CartContext"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { CartItemMsg } from "../CartItem/CartItem";
 const Cart = () => {
 

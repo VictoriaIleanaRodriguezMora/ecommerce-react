@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem"
+import CartContext from "../CartContext/CartContext"
+import { useContext, useState } from "react"
 
 const Cart = () => {
-    
+
+    const { quantAdded } = useContext(CartContext)
+
+
     const CartItemMsg = () => {
         return (
             <div>
@@ -14,9 +19,10 @@ const Cart = () => {
 
     return (
         <>
-            {<CartItem /> === true
-                ? <CartItem />
-                : <CartItemMsg />}
+            {quantAdded === 0
+                ? <CartItemMsg />
+                : <CartItem />
+            }
         </>
     )
 

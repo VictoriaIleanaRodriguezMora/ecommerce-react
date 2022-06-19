@@ -5,7 +5,7 @@ import "./ItemListContainer.css"
 import { useParams } from "react-router"
 // import { getProductosByCategory } from "../asynckmock"
 import Spinner from "../Spinner/Spinner"
-import { getDocs, collection } from "firebase/firestore"
+import { getDocs, collection, query, where } from "firebase/firestore"
 import { bdd } from "../../services/firebase"
 
 const ItemListContainer = () => {
@@ -16,34 +16,25 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoad(true)
+        const collectionProdsRef = (categoryId) ? (
+            query(collection(bdd, "products"), where("category", "==", categoryId))
+        ) : ( collection(bdd, "products") )
 
-        getDocs(collection(bdd, "products")).then(res => {
-            console.log(res);
-        })
-
-        // if (!categoryId) {
-        //     getProductos()
-        //     .then(prods => {
-        //         setProds(prods);
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     })
-        //     .finally( () =>{
-        //         setLoad(false)
-        //     })
-        // } else {
-        //     getProductosByCategory(categoryId)
-        //     .then(prods => {
-        //         setProds(prods)
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     })
-        //     .finally( () =>{
-        //         setLoad(false)
-        //     })
-        // }
+            getDocs(collectionProdsRef)
+                .then(res => {
+                    console.log(res);
+                    const prodsMaped = res.docs.map(doc => {
+                        return { id: doc.id, ...doc.data() }
+                    })
+                    setProds(prodsMaped)
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => {
+                    setLoad(false)
+                })
+       
     }, [categoryId])
 
     if (load) {

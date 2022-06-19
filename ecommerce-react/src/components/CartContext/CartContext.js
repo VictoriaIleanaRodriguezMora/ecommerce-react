@@ -15,11 +15,6 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    // const addCartItem = () => {
-    //     return (
-
-    //     )
-    // }
 
     const removeProdFromCart = (id) => {
         const removeProd = cart.filter(prod => prod.id !== id)
@@ -32,6 +27,11 @@ export const CartProvider = ({ children }) => {
         return totalQuantity
     }
 
+    const getTotalPrice = () => {
+        let totalPrice = (cart[0].price * cart[0].quant)
+        console.log(totalPrice);
+        return totalPrice
+    }
 
 
     return (
@@ -40,6 +40,7 @@ export const CartProvider = ({ children }) => {
             addProdToCart,
             removeProdFromCart,
             getQuantity,
+            getTotalPrice,
             quantAdded,
             setquantAdded
         }} >

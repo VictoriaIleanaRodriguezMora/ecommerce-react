@@ -7,12 +7,10 @@ export const CartProvider = ({ children }) => {
     const [quantAdded, setquantAdded] = useState(0)
 
     const [cart, setCart] = useState([])
-    console.log(cart);
 
     const addProdToCart = (productToAdd) => {
         if (!cart.some(prod => prod.id === productToAdd.id)) {
             setCart([...cart, productToAdd])
-            console.log(cart.name);
         }
     }
 
@@ -22,6 +20,7 @@ export const CartProvider = ({ children }) => {
         // setCart(<CartItemMsg />)
         setCart(removeProd)
         { <CartItemMsg /> }
+        console.log(`removeProdFromCart --> ${id}`);
     }
 
     const getQuantity = () => {
@@ -32,7 +31,6 @@ export const CartProvider = ({ children }) => {
 
     const getTotalPrice = () => {
         let totalPrice = (cart[0].price * cart[0].quant)
-        console.log(totalPrice);
         return totalPrice
     }
 

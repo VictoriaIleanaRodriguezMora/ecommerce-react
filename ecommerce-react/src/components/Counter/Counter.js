@@ -17,7 +17,6 @@ const Counter = ({ name, id, price }) => {
         }
     }
     const addItem = () => {
-        console.log(`Se agregaron ${quant} ${name}`);
         addProdToCart({ name, id, price, quant })
         setquantAdded(quant)
     }

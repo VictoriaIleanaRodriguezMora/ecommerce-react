@@ -16,6 +16,7 @@ const CartItem = () => {
 
     const { cart, getTotalPrice, removeProdFromCart } = useContext(CartContext)
     const cartPosCero = cart[0]
+    console.log(cartPosCero.id);
     return (
         <>
             <div className="CartItem__div">

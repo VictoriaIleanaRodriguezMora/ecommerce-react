@@ -1,12 +1,14 @@
 .counter {
-  width: 80%;
+  width: 50%;
   background-color: rgb(89, 0, 255);
-  border-radius: 25px 25px 0px 0px;
-  padding:2% ;
+  border-radius: 25px;
+  padding: 2%;
   box-sizing: border-box;
+  margin: 4%;
 }
 .agregar__carrito {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding: 1%;
 }
 .divButton {
   width: 100%;

@@ -4,7 +4,9 @@
   flex-direction: column;
   align-items: center;
   padding: 2%;
-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgb(115, 0, 255) 30%, blue)
+
 }
 .CartItem__categorias {
   display: flex;
@@ -36,6 +38,7 @@ box-sizing: border-box;
 .table thead,
 .table tbody {
   width: 100%;
+  background-color: white;
 }
 th,
 tr th,

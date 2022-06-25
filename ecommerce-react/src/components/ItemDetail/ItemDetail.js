@@ -22,7 +22,7 @@ const ItemDetail = ({cart, description, img, id, name, price,stock  }) => {
 
                 {quantAdded === 0
                     ? <Counter  name={name} stock={stock} id={id} price={price} onAdd={handleOnAdd} />
-                    : <Link to="/cart"> Terminar compra </Link>
+                    : <Link to="/cart" className="terminarCompra" > Terminar compra </Link>
                 }
             </div>
             <img src={img} alt={name} />

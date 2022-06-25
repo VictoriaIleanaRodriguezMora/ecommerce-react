@@ -21,13 +21,11 @@ const CartItem = ({ id, name, quant, price,img }) => {
     }
 
     return (
-            <div className="CartItem__div">
-                <div  >
+                <div className="CartItem__div">
                     <table className="table">
                         <thead>
                             <tr className="CartItem__categorias">
-                                <th scope="col">#</th>
-                                <th scope="col">Productos</th>
+                                <th scope="col">Producto</th>
                                 <th scope="col">Cantidad</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Total</th>
@@ -36,7 +34,6 @@ const CartItem = ({ id, name, quant, price,img }) => {
                         </thead>
                         <tbody>
                             <tr className="CartItem__categorias">
-                                <th scope="row"  >1</th>
                                 <td>{name}</td>
                                 <td>{quant}</td>
                                 <td>{price}</td>
@@ -47,8 +44,6 @@ const CartItem = ({ id, name, quant, price,img }) => {
                         </tbody>
                     </table>
                 </div>
-
-            </div>
     )
 
 }

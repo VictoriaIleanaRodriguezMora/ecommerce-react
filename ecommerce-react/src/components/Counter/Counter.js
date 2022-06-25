@@ -24,8 +24,8 @@ const Counter = ({stock = 0, initial = 1, onAdd}) => {
                 <p className="divButton__quant" >{quant}</p>
                 <button onClick={increment} className="divButton__btn" >+</button>
             </div>
-            <div className="agregar__carrito">
-                <button onClick={() => onAdd(quant)} >Agregar al carrito</button>
+            <div >
+                <button className="agregar__carrito" onClick={() => onAdd(quant)  } >Agregar al carrito</button>
             </div>
         </div>
     )

@@ -1,6 +1,5 @@
 import "./Counter.css"
-import { useContext, useState } from "react"
-// import CartContext from "../CartContext/CartContext";
+import { useState } from "react"
 
 const Counter = ({stock = 0, initial = 1, onAdd}) => {
 
@@ -17,7 +16,6 @@ const Counter = ({stock = 0, initial = 1, onAdd}) => {
             setQuant(quant - 1)
         }     
     }
-
 
     return (
         <div className="counter" >

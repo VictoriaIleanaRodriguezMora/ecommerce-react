@@ -4,13 +4,13 @@ import { Link } from "react-router-dom"
 
 const CartWidget = () => {
 
-    const { getQuantity, totalQuantity } = useContext(CartContext)
+    const {  quantAdded } = useContext(CartContext)
 
     return (
         <>
             <Link to="/cart" >
                 <p className="nav__carrito">
-                    <span>{totalQuantity}
+                    <span>{quantAdded}
                     </span>🛒
                 </p>
             </Link>

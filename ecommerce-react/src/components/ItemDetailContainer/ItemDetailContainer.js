@@ -11,7 +11,6 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         const docProdRef = doc(bdd, "products", productId)
-
         getDoc(docProdRef)
             .then(doc => {
                 const prodMaped = { id: doc.id, ...doc.data() }
@@ -21,11 +20,7 @@ const ItemDetailContainer = () => {
                 console.log (error);
             })
 
-
-
-
-
-    }, [])
+    }, [productId])
 
 
     return (

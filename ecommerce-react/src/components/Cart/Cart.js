@@ -4,13 +4,14 @@ import { useContext } from "react"
 import { CartItemMsg } from "../CartItem/CartItem";
 const Cart = () => {
 
-    const { quantAdded } = useContext(CartContext)
+    const { cart, quantAdded } = useContext(CartContext)
 
     return (
         <>
             {quantAdded === 0
                 ? <CartItemMsg />
-                : <CartItem />
+                : cart.map(cart =>
+                    <CartItem key={cart.id}{...cart} />)
             }
         </>
     )

@@ -4,9 +4,14 @@ import { useContext, useState } from "react"
 import CartContext from "../CartContext/CartContext"
 import { Link } from "react-router-dom"
 
-const ItemDetail = ({ name, img, price, description, cart, id }) => {
+const ItemDetail = ({cart, description, img, id, name, price,stock  }) => {
+    const [quantAdded, setquantAdded] = useState(0)
+    const { addProdToCart } = useContext(CartContext)
 
-    const { quantAdded } = useContext(CartContext)
+    const handleOnAdd = (quant) => {
+        addProdToCart({ id, name, price, quant})
+        setquantAdded(quant)
+    }
 
     return (
         <div className="div__IDC" >
@@ -16,12 +21,12 @@ const ItemDetail = ({ name, img, price, description, cart, id }) => {
                 <p className="li__description">$ {price}</p>
 
                 {quantAdded === 0
-                    ? <Counter name={name} id={id} price={price} />
-                    : <Link to="/cart" > Terminar compra </Link>
-}
+                    ? <Counter  name={name} stock={stock} id={id} price={price} onAdd={handleOnAdd} />
+                    : <Link to="/cart"> Terminar compra </Link>
+                }
             </div>
             <img src={img} alt={name} />
         </div>
-    )    
+    )
 }
 export default ItemDetail

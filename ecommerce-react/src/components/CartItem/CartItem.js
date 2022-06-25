@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import CartContext from "../CartContext/CartContext";
-import "./CartItem.css"
 import { Link } from "react-router-dom";
+import "./CartItem.css"
 
 export const CartItemMsg = () => {
     return (
@@ -12,11 +12,14 @@ export const CartItemMsg = () => {
     )
 }
 
-const CartItem = () => {
+const CartItem = ({ id, name, quant, price,img }) => {
 
-    const { cart, getTotalPrice, removeProdFromCart } = useContext(CartContext)
-    const cartPosCero = cart[0]
-    console.log(cartPosCero.id);
+    const { removeProdFromCart, clearCart } = useContext(CartContext)
+
+    const handleRemove = (id) => {
+        removeProdFromCart(id)
+    }
+
     return (
             <div className="CartItem__div">
                 <div  >
@@ -34,23 +37,17 @@ const CartItem = () => {
                         <tbody>
                             <tr className="CartItem__categorias">
                                 <th scope="row"  >1</th>
-                                <td>{cartPosCero.name}</td>
-                                <td>{cartPosCero.quant}</td>
-                                <td>{cartPosCero.price}</td>
-                                <td>{getTotalPrice()}</td>
-                                <td onClick={() => removeProdFromCart(cartPosCero.id)} >Remover item</td>
+                                <td>{name}</td>
+                                <td>{quant}</td>
+                                <td>{price}</td>
+                                <td>{quant * price}</td>
+                                <td onClick={() => handleRemove(id)} >Remover item</td>
                             </tr>
 
                         </tbody>
                     </table>
                 </div>
-                {/* <ul className="CartItem__ul">
-                    <li>{cartPosCero.name}</li>
-                    <li>{cartPosCero.quant}</li>
-                    <li>{cartPosCero.price}</li>
-                    <li>{getTotalPrice()}</li>
-                    <button onClick={() => removeProdFromCart(cartPosCero.id)} >Remover item</button>
-                </ul> */}
+
             </div>
     )
 

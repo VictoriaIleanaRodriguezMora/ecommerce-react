@@ -1,13 +1,22 @@
-import { createContext, useState } from "react";
-import { CartItemMsg } from "../CartItem/CartItem";
+import { createContext, useState, useEffect } from "react";
 
 const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
     const [quantAdded, setquantAdded] = useState(0)
-
     const [cart, setCart] = useState([])
 
+    useEffect(() => {
+        let totalQuantity = 0 
+        cart.forEach(prod => {
+            totalQuantity += prod.quant
+        })
+        setquantAdded(totalQuantity)
+    }, [cart])
+
+
+    
+//additem
     const addProdToCart = (productToAdd) => {
         if (!cart.some(prod => prod.id === productToAdd.id)) {
             setCart([...cart, productToAdd])
@@ -17,30 +26,30 @@ export const CartProvider = ({ children }) => {
 
     const removeProdFromCart = (id) => {
         const removeProd = cart.filter(prod => prod.id !== id)
-        // setCart(<CartItemMsg />)
         setCart(removeProd)
-        { <CartItemMsg /> }
         console.log(`removeProdFromCart --> ${id}`);
     }
 
-    const getQuantity = () => {
-        let totalQuantity = 0
-        cart.forEach(prod => totalQuantity += prod.quant)
-        return totalQuantity
+    const clearCart = () => {
+        setCart ([])
     }
+
+    // const getQuantity = () => {
+    //     let totalQuantity = 0
+    //     cart.forEach(prod => totalQuantity += prod.quant)
+    //     return totalQuantity
+    // }
 
     const getTotalPrice = () => {
-        let totalPrice = (cart[0].price * cart[0].quant)
+        let totalPrice = (cart[0].price * cart[0].quantity)
         return totalPrice
     }
-
-
     return (
         <CartContext.Provider value={{
             cart,
             addProdToCart,
             removeProdFromCart,
-            getQuantity,
+            clearCart,
             getTotalPrice,
             quantAdded,
             setquantAdded

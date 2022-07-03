@@ -1,12 +1,8 @@
-import { app } from "../../services/firebase"
-import { getAuth, signOut } from "firebase/auth"
 import { useState } from "react"
-import { addDoc, collection, updateDoc, doc, writeBatch, getDocs, query, where, documentId } from "firebase/firestore"
+import { addDoc, collection} from "firebase/firestore"
 import { bdd } from "../../services/firebase/index"
 import CartContext from "../CartContext/CartContext"
 import { useContext } from "react"
-
-const auth = getAuth(app)
 
 
 const Form = () => {

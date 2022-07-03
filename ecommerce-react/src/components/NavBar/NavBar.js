@@ -14,6 +14,9 @@ const NavBar = () => {
                 <Link to="/category/tablet" className="nav__li"> tablet</Link>
             </ul>
             <CartWidget/>
+            <Link to="/form" >
+                <h3 className="nav__marca" >👥</h3>
+            </Link>
         </nav>
     )
 }

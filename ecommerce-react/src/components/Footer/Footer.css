@@ -1,6 +1,10 @@
 #footer {
   height: 30vh;
   background-color: black;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  /* z-index: -1; */
 }
 
 #footer .footer__lista {
@@ -8,7 +12,6 @@
   flex-direction: row;
   padding: 0em;
   justify-content: center;
-
 }
 #footer .footer__lista li {
   margin: 10px;

@@ -4,9 +4,10 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { CartProvider } from './components/CartContext/CartContext';
-import { useState } from "react"
 import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer';
+import Form from './components/Form/Form';
+
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/detail/:productId" element={<ItemDetailContainer />} />
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
           <Footer />
         </BrowserRouter>

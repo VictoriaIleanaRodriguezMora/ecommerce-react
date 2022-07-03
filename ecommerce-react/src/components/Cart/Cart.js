@@ -3,10 +3,11 @@ import CartContext from "../CartContext/CartContext"
 import { useContext } from "react"
 import { CartItemMsg } from "../CartItem/CartItem";
 import "./Cart.css"
+import { Link } from "react-router-dom"
+
 import { addDoc, collection, updateDoc, doc, writeBatch, getDocs, query, where, documentId } from "firebase/firestore"
 import { bdd } from "../../services/firebase/index"
-import { useState } from "react"
-import Form from "../Form/Form";
+// import Form from "../Form/Form";
 
 
 const Cart = () => {
@@ -25,8 +26,8 @@ const Cart = () => {
                 :
                 cart.map(cart =>
                     <CartItem key={cart.id}{...cart} />)
-            }
-            <Form></Form>
+                }
+                <Link to="/form" >Generar orden</Link>
 
         </>
     )

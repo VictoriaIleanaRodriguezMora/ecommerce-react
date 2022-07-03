@@ -17,7 +17,7 @@ const CartList = () => {
             </ul>
             {cart.map(cart =>
                 <CartItem key={cart.id}{...cart} />)}
-            <Link to="/form" >Generar orden</Link>
+            <Link to="/form" className="generarOrden">Generar orden</Link>
         </div>
     )
 }

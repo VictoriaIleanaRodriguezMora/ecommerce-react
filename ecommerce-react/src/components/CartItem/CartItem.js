@@ -3,14 +3,23 @@ import CartContext from "../CartContext/CartContext";
 import { Link } from "react-router-dom";
 import "./CartItem.css"
 
-export const CartItemMsg = () => {
+export const CartItemMsgContainer = () => {
     return (
-        <div className="CartItemMsg__Msg" >
+        <div className="CartItemMsg__Container" >
             <div className="CartItemMsg" >
                 <p className="CartItemMsg__p" >No hay productos agregados aun. </p>
                 <Link to="/" className="CartItemMsg__a">Podes ir acá para empezar tu compra.</Link>
             </div>
         </div>
+    )
+}
+
+export const CartItemMsg = () => {
+    return (
+            <div className="CartItemMsg" >
+                <p className="CartItemMsg__p" >No hay productos agregados aun. </p>
+                <Link to="/" className="CartItemMsg__a">Podes ir acá para empezar tu compra.</Link>
+            </div>
     )
 }
 

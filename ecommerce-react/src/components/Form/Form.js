@@ -5,6 +5,7 @@ import { addDoc, collection, updateDoc, doc, writeBatch, getDocs, query, where, 
 import { bdd } from "../../services/firebase/index"
 import CartContext from "../CartContext/CartContext"
 import { useContext } from "react"
+
 const auth = getAuth(app)
 
 
@@ -32,13 +33,18 @@ const Form = () => {
     }
 
 
-    
+
     const handleCreateOrder = () => {
         const objOrder = {
             buyer: user,
             items: cart,
             total: quantAdded
         }
+
+        const orderCollection = collection(bdd, "orders")
+        addDoc(orderCollection, objOrder)
+            .then(({ id }) => console.log(id))
+
         console.log(user);
         console.log(cart);
         console.log(objOrder);
@@ -46,24 +52,24 @@ const Form = () => {
     }
     return (
         <form onSubmit={guardarDatos}>
-        <div>
-            <label>Name</label>
-            <input type="text" name='name' placeholder='Ingrese su nombre'
-                onChange={capturarInputs} value={user.name} />
-        </div>
-        <div>
-            <label>Email</label>
-            <input type="text" name='email' placeholder='Ingrese su Email'
-                onChange={capturarInputs} value={user.email} />
-        </div>
-        <div>
-            <label>Phone</label>
-            <input type="text" name='phone' placeholder='Ingrese su telefono'
-                onChange={capturarInputs} value={user.phone} />
-        </div>
+            <div>
+                <label>Name</label>
+                <input type="text" name='name' placeholder='Ingrese su nombre'
+                    onChange={capturarInputs} value={user.name} />
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="text" name='email' placeholder='Ingrese su Email'
+                    onChange={capturarInputs} value={user.email} />
+            </div>
+            <div>
+                <label>Phone</label>
+                <input type="text" name='phone' placeholder='Ingrese su telefono'
+                    onChange={capturarInputs} value={user.phone} />
+            </div>
 
-        <button onClick={handleCreateOrder} >Generar Orden</button>
-    </form>
+            <button onClick={handleCreateOrder} >Generar Orden</button>
+        </form>
     )
 }
 

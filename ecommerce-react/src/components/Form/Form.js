@@ -15,7 +15,7 @@ const Form = () => {
     const valorInicial = {
         name: '',
         email: '',
-        phone: '',
+        phone: ''
     }
     const [user, setUser] = useState(valorInicial)
 
@@ -27,7 +27,6 @@ const Form = () => {
 
     const guardarDatos = async (e) => {
         e.preventDefault();
-        console.log(user);
         setUser({ ...valorInicial })
 
     }
@@ -35,11 +34,14 @@ const Form = () => {
 
     
     const handleCreateOrder = () => {
-        valorInicial["buyer"] = user
-        valorInicial["items"] = cart
-        valorInicial["total"] = quantAdded
+        const objOrder = {
+            buyer: user,
+            items: cart,
+            total: quantAdded
+        }
         console.log(user);
         console.log(cart);
+        console.log(objOrder);
 
     }
     return (

@@ -24,28 +24,13 @@ const CartItem = ({ id, name, quant, price, img }) => {
 
     return (
         <>
-            <div className="CartItem__div">
-                <table className="table">
-                    <thead>
-                        <tr className="CartItem__categorias">
-                            <th scope="col">Producto</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Remover</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="CartItem__categorias">
-                            <td>{name}</td>
-                            <td>{quant}</td>
-                            <td>{price}</td>
-                            <td>{quant * price}</td>
-                            <td onClick={() => handleRemove(id)} >Remover item</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <ul className="CartItem__categorias">
+                    <li>{name}</li>
+                    <li>{quant}</li>
+                    <li>{price}</li>
+                    <li>{quant * price}</li>
+                    <li onClick={() => handleRemove(id)} >Remover item</li>
+                </ul>
         </>
     )
 

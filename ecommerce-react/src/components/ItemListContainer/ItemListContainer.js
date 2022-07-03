@@ -5,7 +5,6 @@ import { useParams } from "react-router"
 import Spinner from "../Spinner/Spinner"
 import { getDocs, collection, query, where } from "firebase/firestore"
 import { bdd } from "../../services/firebase"
-
 const ItemListContainer = () => {
 
     const [load, setLoad] = useState(true)

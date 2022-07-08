@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { addDoc, collection } from "@firebase/firestore"
+import { addDoc, collection } from "firebase/firestore"
 import { bdd } from "../../services/firebase/index"
 import CartContext from "../CartContext/CartContext"
 import { useContext } from "react"

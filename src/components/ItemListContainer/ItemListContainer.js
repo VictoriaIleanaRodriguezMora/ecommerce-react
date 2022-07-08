@@ -3,7 +3,7 @@ import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import { useParams } from "react-router"
 import Spinner from "../Spinner/Spinner"
-import { getDocs, collection, query, where } from "@firebase/firestore"
+import { getDocs, collection, query, where } from "firebase/firestore"
 import { bdd } from "../../services/firebase"
 const ItemListContainer = () => {
 

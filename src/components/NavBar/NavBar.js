@@ -4,7 +4,7 @@ import CartWidget from "../CartWidget/CartWidget"
 
 const NavBar = () => {
     return (
-        <nav className="header__nav">
+        <nav>
             <Link to="/" >
                 <h3 className="nav__marca" >Marca</h3>
             </Link>

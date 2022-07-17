@@ -1,7 +1,10 @@
 //import "../../sassCarpeta/index.scss"
 
 @import './componentesSass/NavBar';
+@import './componentesSass/Footer';
 @import "./componentesSass/ItemListContainer";
+@import "./componentesSass/ItemDetailContainer";
+
 
 body {
   text-align: center;

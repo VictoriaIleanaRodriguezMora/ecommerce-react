@@ -1,12 +1,12 @@
-import "./Item.css"
 import { Link } from "react-router-dom"
+import "../../sassCarpeta/index.scss"
 
 const Item = ({ id, name, img, price }) => {
     return (
-        <li className="li__Item">
-            <p className="li__titulo">{name}</p>
+        <li>
+            <h3>{name}</h3>
             <img src={img} alt={name} />
-            <p className="li__description">${price}</p>
+            <p>${price}</p>
             <Link to={`/detail/${id}`} > Ver detalle </Link>
         </li>
     )

@@ -9,7 +9,7 @@ const CartWidget = () => {
     return (
         <>
             <Link to="/cart" >
-                <p className="nav__carrito">
+                <p className="CartWidget">
                     <span>{quantAdded}
                     </span>🛒
                 </p>

@@ -1,10 +1,12 @@
+import "../../sassCarpeta/index.scss"
 import { useEffect, useState } from "react"
-import ItemList from "../ItemList/ItemList"
-import "./ItemListContainer.css"
 import { useParams } from "react-router"
+import ItemList from "../ItemList/ItemList"
 import Spinner from "../Spinner/Spinner"
 import { getDocs, collection, query, where } from "firebase/firestore"
 import { bdd } from "../../services/firebase"
+
+
 const ItemListContainer = () => {
 
     const [load, setLoad] = useState(true)

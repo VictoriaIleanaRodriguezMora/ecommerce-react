@@ -1,9 +1,9 @@
-import "./Footer.css"
+import "../../sassCarpeta/index.scss"
 
 const Footer = () => {
     return (
-        <footer id="footer">
-            <ul className="footer__lista">
+        <footer>
+            <ul>
                 <li>
                     <a href="https://twitter.com/VirmCode" > <i className="fab fa-twitter"></i></a>
                 </li>
@@ -16,7 +16,7 @@ const Footer = () => {
                 <li><a href="https://wa.me//5491133990583?text=Hola%20Victoria%20" ><i
                     className="fab fa-whatsapp"></i></a></li>
             </ul>
-            <p className="footer__copy">
+            <p>
                 <a href="https://victoriarodriguez-portfolio.netlify.app/" > <i className="far fa-copyright"></i> Victoria Ileana Rodriguez Mora 2022 </a>
             </p>
         </footer>

@@ -18,6 +18,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+
     div {
       display: flex;
       justify-content: center;
@@ -36,6 +37,11 @@
       &::placeholder {
         font-size: 1em;
       }
+    }
+    .CartItemMsg {
+      display: flex;
+      align-items: center;
+
     }
   }
 }

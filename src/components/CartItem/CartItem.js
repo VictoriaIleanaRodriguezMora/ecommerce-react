@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import CartContext from "../CartContext/CartContext";
 import { Link } from "react-router-dom";
-import "./CartItem.css"
+import "../../sassCarpeta/index.scss"
 
 export const CartItemMsgContainer = () => {
     return (

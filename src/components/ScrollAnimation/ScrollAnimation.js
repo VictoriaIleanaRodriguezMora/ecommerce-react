@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
-import "./ScrollAnimation.css"
+import "../../sassCarpeta/index.scss"
+
 const ScrollAnimation = () => {
     const [background, setBg] = useState("blue")
 

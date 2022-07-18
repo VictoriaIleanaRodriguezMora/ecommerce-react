@@ -1,7 +1,7 @@
 import CartContext from "../CartContext/CartContext"
 import { useContext } from "react"
 import { CartItemMsgContainer } from "../CartItem/CartItem";
-import "./Cart.css"
+import "../../sassCarpeta/index.scss"
 import CartList from "../CartList/CartList";
 
 const Cart = () => {

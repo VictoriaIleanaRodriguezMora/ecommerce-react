@@ -1,5 +1,5 @@
+import "../../sassCarpeta/index.scss"
 
-import "./Spinner.css"
 const Spinner = () => {
     return (
         <div className="div_spinner">

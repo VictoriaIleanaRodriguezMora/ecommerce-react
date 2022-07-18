@@ -4,8 +4,7 @@ import { bdd } from "../../services/firebase/index"
 import CartContext from "../CartContext/CartContext"
 import { useContext } from "react"
 import { CartItemMsg } from "../CartItem/CartItem";
-
-import "./Form.css"
+import "../../sassCarpeta/index.scss"
 
 const Form = () => {
     const { cart, quantAdded } = useContext(CartContext)

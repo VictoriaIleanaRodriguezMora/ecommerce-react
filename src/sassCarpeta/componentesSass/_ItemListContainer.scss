@@ -6,10 +6,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 80vh;
+  padding: 1%;
+  box-sizing: border-box;
   background-image: linear-gradient(rgb(115, 0, 255) 30%, blue);
-
+  @media screen and (max-width: 1136px) {
+    padding: 10%;
+    height: auto;
+  }
+  @media screen and (max-width: 661px) {
+    // padding-bottom: 120%;
+  }
   // ItemList
   ul {
+    box-sizing: border-box;
     width: 100%;
     padding: 0;
     margin: 1%;
@@ -19,11 +28,12 @@
     justify-content: space-evenly;
     // Item
     li {
+      box-sizing: border-box;
       border: 2px solid rgb(132, 0, 255);
       background-color: black;
       color: black;
-      width: 20%;
-      margin: 0;
+      width: 20em;
+      margin: 2%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,7 +52,7 @@
         font-size: 1.5rem;
       }
 
-      p{
+      p {
         background-color: rgba(255, 255, 255, 0.425);
         padding: 2%;
         width: 40%;

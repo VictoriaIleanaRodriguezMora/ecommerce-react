@@ -60,25 +60,47 @@
       top: 0;
       right: 0;
       cursor: pointer;
-    }
-    ul {
-      display: flex;
-      flex-direction: column;
-      width: 79%;
-      padding-left: 0px;
-      padding-right: 30px;
-      a {
-        margin: 2em;
-      } 
+      @media screen and (max-width: 500px) {
+        top: -2px;
+        right: -8px;
+      }
+      @media screen and (max-width: 300px) {
+        top: -2px;
+        right: -15px;
+      }
     }
     .nav {
       display: none;
       transition: all 500ms ease;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: 79%;
+        padding-left: 0px;
+        padding-right: 43px;
+        a {
+          font-size: 1.3em;
+        }
+        @media screen and (max-width: 650px) {
+          padding-right: 30px;
+          a {
+            font-size: 1.3em;
+          }
+        }
+        @media screen and (max-width: 500px) {
+          padding-right: 25px;
+        }
+        @media screen and (max-width: 330px) {
+          padding-right: 15px;
+        }
+      }
     }
     .nav.activeNav {
       transition: all 500ms ease;
       display: flex;
       flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.13);
     }
   }
 }

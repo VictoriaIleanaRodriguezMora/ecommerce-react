@@ -14,6 +14,9 @@ const ItemDetail = ({ cart, description, img, id, name, price, stock }) => {
 
     return (
         <div className="div__IDC" >
+            <section>
+                <img src={img} alt={name} />
+            </section>
             <div className="IDC__info" >
                 <h2>{name}</h2>
                 <p className="description"> {description}</p>
@@ -24,7 +27,6 @@ const ItemDetail = ({ cart, description, img, id, name, price, stock }) => {
                     : <Link to="/cart" className="terminarCompra" > Terminar compra </Link>
                 }
             </div>
-            <img src={img} alt={name} />
         </div>
     )
 }

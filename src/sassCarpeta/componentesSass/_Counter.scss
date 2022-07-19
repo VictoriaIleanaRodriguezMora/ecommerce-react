@@ -1,6 +1,7 @@
 .counter {
   width: 50%;
   background-color: rgb(89, 0, 255);
+  background-image: -webkit-radial-gradient( top left, rgb(89, 0, 255), rgb(5, 1, 71) );
   border-radius: 25px;
   padding: 2%;
   box-sizing: border-box;

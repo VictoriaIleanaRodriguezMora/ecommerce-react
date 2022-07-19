@@ -45,9 +45,9 @@ const Form = () => {
                 .then(({ id }) => console.log(id))
 
 
-                console.log(user);
-                console.log(cart);
-                console.log(objOrder);
+            console.log(user);
+            console.log(cart);
+            console.log(objOrder);
 
         }
 
@@ -60,19 +60,19 @@ const Form = () => {
         <div className="form" >
             <form onSubmit={guardarDatos}>
                 <div>
-                    <label>Nombre</label>
-                    <input type="text" name='name' placeholder='Ingrese su nombre'
-                        onChange={capturarInputs} value={user.name} required />
+                    <label>Nombre
+                        <input type="text" name='name' placeholder='Ingrese su nombre'
+                            onChange={capturarInputs} value={user.name} required /></label>
                 </div>
                 <div>
-                    <label>Mail</label>
-                    <input type="text" name='email' placeholder='Ingrese su Mail'
-                        onChange={capturarInputs} value={user.email} required />
+                    <label>Mail
+                        <input type="text" name='email' placeholder='Ingrese su Mail'
+                            onChange={capturarInputs} value={user.email} required /></label>
                 </div>
                 <div>
-                    <label>Telefono</label>
-                    <input type="text" name='phone' placeholder='Ingrese su telefono'
-                        onChange={capturarInputs} value={user.phone} required />
+                    <label>Telefono
+                        <input type="text" name='phone' placeholder='Ingrese su telefono'
+                            onChange={capturarInputs} value={user.phone} required /></label>
                 </div>
                 {quantAdded === 0
                     ? <CartItemMsg />

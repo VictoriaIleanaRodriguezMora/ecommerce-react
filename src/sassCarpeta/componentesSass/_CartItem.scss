@@ -1,11 +1,11 @@
 //Cart
 .CartItem__div {
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 4%;
-  height: auto;
   box-sizing: border-box;
   background-image: linear-gradient(rgb(115, 0, 255) 30%, blue);
 }

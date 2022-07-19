@@ -10,12 +10,10 @@
   box-sizing: border-box;
   background-image: linear-gradient(rgb(115, 0, 255) 30%, blue);
   @media screen and (max-width: 1136px) {
-    padding: 10%;
+    padding: 5%;
     height: auto;
   }
-  @media screen and (max-width: 661px) {
-    // padding-bottom: 120%;
-  }
+
   // ItemList
   ul {
     box-sizing: border-box;
@@ -26,6 +24,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    @media screen and (max-width: 500px) {
+      margin-top: 10%;
+    }
+    @media screen and (max-width: 350px) {
+      margin-top: 20%;
+    }
+    @media screen and (max-width: 200px) {
+      margin-top: 28%;
+    }
     // Item
     li {
       box-sizing: border-box;
@@ -41,6 +48,18 @@
       border-radius: 25px;
       box-sizing: border-box;
       padding: 1%;
+      @media screen and (max-width: 1136px) {
+        width: 22em;
+      }
+      @media screen and (max-width: 600px) {
+        width: 19em;
+      }
+      @media screen and (max-width: 400px) {
+        width: 17em;
+      }
+      @media screen and (max-width: 350px) {
+        width: 15em;
+      }
       h3 {
         font-size: 20px;
         background-color: white;
@@ -50,6 +69,15 @@
         border-radius: 15px;
         text-align: center;
         font-size: 1.5rem;
+        @media screen and (max-width: 1136px) {
+          font-size: 1.2rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 0.8rem;
+        }
       }
 
       p {
@@ -59,12 +87,41 @@
         border-radius: 15px;
         color: white;
         font-size: 1.2rem;
+        @media screen and (max-width: 1136px) {
+          font-size: 1rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 0.8rem;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 0.7rem;
+        }
       }
       img {
         width: 200px;
         height: 200px;
         border-radius: 10px;
         box-shadow: 10px 10px 10px black;
+        @media screen and (max-width: 1136px) {
+          width: 180px;
+          height: 180px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 160px;
+          height: 160px;
+        }
+        @media screen and (max-width: 400px) {
+          width: 140px;
+          height: 140px;
+        }
+        @media screen and (max-width: 200px) {
+          width: 120px;
+          height: 120px;
+        }
+        @media screen and (max-width: 160px) {
+          width: 105px;
+          height: 105px;
+        }
       }
 
       a {
@@ -73,6 +130,11 @@
         padding: 2%;
         width: 40%;
         border-radius: 15px;
+        margin: 2%;
+        font-size: 1em;
+        @media screen and (max-width: 500px) {
+          font-size: 0.7em;
+        }
       }
     }
   }
